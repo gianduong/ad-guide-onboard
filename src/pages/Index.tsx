@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Target, BarChart3, ArrowRight, CheckCircle, TrendingUp, Users, Settings } from 'lucide-react';
+import { Target, BarChart3, ArrowRight, CheckCircle, TrendingUp, Users, Settings, ExternalLink } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
@@ -36,6 +35,35 @@ const Index = () => {
     { label: "Cost per Conversion", value: "$24.50", change: "-15%" }
   ];
 
+  const apps = [
+    {
+      title: "Omega Facebook Pixel Ad Report",
+      description: "Get experienced tracking data & optimize campaign ROAS faster. Exclusive code: BFG30",
+      badge: "Get 30% OFF!",
+      badgeColor: "bg-gray-900 text-white",
+      rating: "5.0 (5)",
+      reviews: "Impression today at 12:42",
+      bgColor: "bg-purple-100",
+      icon: "📊"
+    },
+    {
+      title: "Omega - Multi Pinterest Pixels",
+      description: "Say goodbye to guesswork when you decide which ads to scale or kill.",
+      badge: "Check it now",
+      badgeColor: "bg-gray-900 text-white",
+      bgColor: "bg-pink-100",
+      icon: "📌"
+    },
+    {
+      title: "Omega - Multi Snapchat Pixels",
+      description: "Fuel your ads with rich data for smart optimization.",
+      badge: "Check it now", 
+      badgeColor: "bg-gray-900 text-white",
+      bgColor: "bg-yellow-100",
+      icon: "👻"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
@@ -54,7 +82,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto space-y-6">
               <h2 className="text-5xl font-bold text-gray-900 leading-tight">
                 Nâng cao hiệu quả
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Marketing </span>
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Marketing </span> 
                 với Tracking chính xác
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -129,6 +157,65 @@ const Index = () => {
                     </div>
                   ))}
                 </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {/* Our Apps Section */}
+      <div className="max-w-7xl mx-auto px-6 py-20 bg-white">
+        <div className="text-center mb-16">
+          <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4 inline-block">
+            Recommended app
+          </span>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            Một vài app của chúng tôi
+          </h3>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Khám phá bộ sưu tập ứng dụng tracking và tối ưu hóa marketing của chúng tôi
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {apps.map((app, index) => (
+            <Card key={index} className="relative group hover:shadow-lg transition-all duration-300 overflow-hidden">
+              <div className={`${app.bgColor} h-24 flex items-center justify-center relative`}>
+                <div className="text-3xl">{app.icon}</div>
+                <div className="absolute top-2 right-2">
+                  <ExternalLink className="w-4 h-4 text-gray-600" />
+                </div>
+              </div>
+              
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg font-bold text-gray-900 leading-tight">
+                  {app.title}
+                </CardTitle>
+              </CardHeader>
+              
+              <CardContent className="space-y-4">
+                <CardDescription className="text-gray-600 text-sm leading-relaxed">
+                  {app.description}
+                </CardDescription>
+                
+                {app.rating && (
+                  <div className="flex items-center space-x-2 text-xs text-gray-500">
+                    <div className="flex items-center space-x-1">
+                      <span className="text-yellow-400">★</span>
+                      <span>{app.rating}</span>
+                    </div>
+                    <span>•</span>
+                    <span>{app.reviews}</span>
+                  </div>
+                )}
+                
+                <Button 
+                  variant="secondary"
+                  size="sm" 
+                  className={`w-full ${app.badgeColor} hover:opacity-90 text-sm font-medium`}
+                >
+                  {app.badge}
+                </Button>
               </CardContent>
             </Card>
           ))}
