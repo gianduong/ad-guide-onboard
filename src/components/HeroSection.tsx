@@ -2,6 +2,7 @@
 import React from 'react';
 import { Text, Button, InlineStack, BlockStack } from '@shopify/polaris';
 import { useNavigate } from 'react-router-dom';
+import { ArrowRightIcon } from '@shopify/polaris-icons';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -13,7 +14,11 @@ const HeroSection = () => {
           {/* Logo and Brand */}
           <InlineStack gap="300" align="center" blockAlign="center">
             <div className="w-12 h-12 flex items-center justify-center rounded-xl" style={{ background: 'linear-gradient(to right, #3366ff, #9966ff)' }}>
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='6'/><circle cx='12' cy='12' r='2'/></svg>" alt="Target icon" />
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
             </div>
             <Text variant="headingXl" as="h1">TrackMaster</Text>
           </InlineStack>
@@ -39,9 +44,9 @@ const HeroSection = () => {
               variant="primary"
               size="large" 
               onClick={() => navigate('/onboarding')}
+              icon={ArrowRightIcon}
             >
               Bắt đầu ngay
-              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='12' x2='19' y2='12'/><polyline points='12 5 19 12 12 19'/></svg>" alt="Arrow right" className="ml-2" />
             </Button>
             <Button 
               size="large"

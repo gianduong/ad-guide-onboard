@@ -2,6 +2,7 @@
 import React from 'react';
 import { Text, Button, BlockStack } from '@shopify/polaris';
 import { useNavigate } from 'react-router-dom';
+import { ArrowRightIcon } from '@shopify/polaris-icons';
 
 const CTASection = () => {
   const navigate = useNavigate();
@@ -21,9 +22,9 @@ const CTASection = () => {
             tone="success"
             size="large"
             onClick={() => navigate('/onboarding')}
+            icon={ArrowRightIcon}
           >
             Bắt đầu hướng dẫn cài đặt
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='12' x2='19' y2='12'/><polyline points='12 5 19 12 12 19'/></svg>" alt="Arrow right" className="ml-2" />
           </Button>
         </BlockStack>
       </div>

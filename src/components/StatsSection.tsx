@@ -13,7 +13,7 @@ const StatsSection = () => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-8">
       {stats.map((stat, index) => (
-        <Box key={index} padding="400" background="surface" borderRadius="200">
+        <Box key={index} padding="400" borderRadius="200">
           <BlockStack gap="100" align="center">
             <Text variant="headingLg" as="p">{stat.value}</Text>
             <Text variant="bodySm" as="p" tone="subdued">{stat.label}</Text>
