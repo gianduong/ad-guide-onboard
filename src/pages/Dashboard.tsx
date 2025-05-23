@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -188,7 +187,7 @@ const Dashboard = () => {
                             <td className="px-4 py-3 text-sm text-gray-600">{item.type}</td>
                             <td className="px-4 py-3">
                               <div className="flex items-center space-x-2">
-                                <Switch checked={true} size="sm" />
+                                <Switch checked={true} />
                                 <Badge variant="default" className="bg-green-100 text-green-800">{item.status}</Badge>
                               </div>
                             </td>
