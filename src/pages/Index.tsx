@@ -12,13 +12,13 @@ import {
   Badge
 } from '@shopify/polaris';
 import { 
-  TargetMajor, 
+  LocationMajor as TargetMajor, 
   AnalyticsMajor, 
-  GrowthMajor, 
+  TrendingUpMajor as GrowthMajor, 
   ArrowRightMinor, 
-  CheckmarkMinor, 
+  TickSmallMinor as CheckmarkMinor, 
   SettingsMajor, 
-  UsersMajor,
+  CustomersMajor as UsersMajor,
   ExternalMinor
 } from '@shopify/polaris-icons';
 import { useNavigate } from 'react-router-dom';
