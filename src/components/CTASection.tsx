@@ -2,7 +2,7 @@
 import React from 'react';
 import { Text, Button, BlockStack } from '@shopify/polaris';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRightIcon } from '@shopify/polaris-icons';
+import { ArrowRightMinor } from '@shopify/polaris-icons';
 
 const CTASection = () => {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const CTASection = () => {
             tone="success"
             size="large"
             onClick={() => navigate('/onboarding')}
-            icon={ArrowRightIcon}
+            icon={ArrowRightMinor}
           >
             Bắt đầu hướng dẫn cài đặt
           </Button>

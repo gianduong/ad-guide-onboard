@@ -2,7 +2,7 @@
 import React from 'react';
 import { Text, Button, InlineStack, BlockStack } from '@shopify/polaris';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRightIcon } from '@shopify/polaris-icons';
+import { ArrowRightMinor } from '@shopify/polaris-icons';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const HeroSection = () => {
               variant="primary"
               size="large" 
               onClick={() => navigate('/onboarding')}
-              icon={ArrowRightIcon}
+              icon={ArrowRightMinor}
             >
               Bắt đầu ngay
             </Button>
