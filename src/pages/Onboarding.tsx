@@ -19,20 +19,20 @@ const OnboardingStep = ({
   isActive: boolean;
   isCompleted: boolean;
 }) => (
-  <div className={`flex items-start space-x-4 p-6 rounded-lg transition-all duration-300 ${
+  <div className={`flex items-start space-x-3 p-4 rounded-lg transition-all duration-300 ${
     isActive ? 'bg-blue-50 border-2 border-blue-200' : 'bg-white'
   }`}>
-    <div className={`p-3 rounded-full transition-colors duration-300 ${
+    <div className={`p-2 rounded-full transition-colors duration-300 ${
       isCompleted ? 'bg-green-100 text-green-600' : 
       isActive ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-400'
     }`}>
-      {isCompleted ? <CheckCircle className="w-6 h-6" /> : <Icon className="w-6 h-6" />}
+      {isCompleted ? <CheckCircle className="w-5 h-5" /> : <Icon className="w-5 h-5" />}
     </div>
     <div className="flex-1">
-      <h3 className={`text-lg font-semibold transition-colors duration-300 ${
+      <h3 className={`text-base font-semibold transition-colors duration-300 ${
         isActive ? 'text-blue-900' : 'text-gray-700'
       }`}>{title}</h3>
-      <p className="text-gray-600 mt-1">{description}</p>
+      <p className="text-sm text-gray-600 mt-1">{description}</p>
     </div>
   </div>
 );
@@ -44,28 +44,28 @@ const Onboarding = () => {
   const steps = [
     {
       icon: Play,
-      title: "Chào mừng đến với TrackMaster",
-      description: "Giải pháp toàn diện để tracking Google Ads conversion và Google Analytics 4 cho doanh nghiệp của bạn.",
+      title: "Welcome to TrackMaster",
+      description: "Complete analytics solution for tracking Google Ads conversions and Google Analytics 4.",
       content: (
-        <div className="text-center space-y-6">
-          <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
-            <Target className="w-12 h-12 text-white" />
+        <div className="text-center space-y-4">
+          <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
+            <Target className="w-10 h-10 text-white" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
               TrackMaster Analytics
             </h2>
-            <p className="text-xl text-gray-600 mb-6">
-              Theo dõi hiệu quả quảng cáo và phân tích hành vi khách hàng một cách chính xác
+            <p className="text-lg text-gray-600 mb-4">
+              Track ad performance and analyze customer behavior with precision
             </p>
-            <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <Target className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <p className="text-sm font-medium text-blue-900">Google Ads Tracking</p>
+            <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto">
+              <div className="bg-blue-50 p-3 rounded-lg">
+                <Target className="w-6 h-6 text-blue-600 mx-auto mb-1" />
+                <p className="text-xs font-medium text-blue-900">Google Ads Tracking</p>
               </div>
-              <div className="bg-green-50 p-4 rounded-lg">
-                <BarChart3 className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <p className="text-sm font-medium text-green-900">GA4 Analytics</p>
+              <div className="bg-green-50 p-3 rounded-lg">
+                <BarChart3 className="w-6 h-6 text-green-600 mx-auto mb-1" />
+                <p className="text-xs font-medium text-green-900">GA4 Analytics</p>
               </div>
             </div>
           </div>
@@ -74,36 +74,36 @@ const Onboarding = () => {
     },
     {
       icon: Target,
-      title: "Kết nối Google Ads",
-      description: "Liên kết tài khoản Google Ads của bạn để bắt đầu tracking conversion một cách tự động.",
+      title: "Connect Google Ads",
+      description: "Link your Google Ads account to start automatic conversion tracking.",
       content: (
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full mx-auto flex items-center justify-center mb-4">
-              <Target className="w-8 h-8 text-blue-600" />
+            <div className="w-14 h-14 bg-blue-100 rounded-full mx-auto flex items-center justify-center mb-3">
+              <Target className="w-7 h-7 text-blue-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Kết nối Google Ads</h3>
-            <p className="text-gray-600">Theo dõi conversion và đo lường ROI chính xác</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Connect Google Ads</h3>
+            <p className="text-gray-600">Track conversions and measure ROI accurately</p>
           </div>
           
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h4 className="font-semibold text-gray-900 mb-4">Bạn sẽ có thể:</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Tracking conversion tự động</span>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Automatic conversion tracking</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Đo lường hiệu quả chiến dịch</span>
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Campaign performance measurement</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Tối ưu hóa chi phí quảng cáo</span>
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Ad spend optimization</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Báo cáo chi tiết theo thời gian thực</span>
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Real-time detailed reports</span>
               </li>
             </ul>
           </div>
@@ -112,36 +112,36 @@ const Onboarding = () => {
     },
     {
       icon: BarChart3,
-      title: "Tích hợp Google Analytics 4",
-      description: "Cài đặt GA4 tracking để phân tích hành vi khách hàng và tối ưu hóa website.",
+      title: "Integrate Google Analytics 4",
+      description: "Set up GA4 tracking to analyze customer behavior and optimize your website.",
       content: (
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full mx-auto flex items-center justify-center mb-4">
-              <BarChart3 className="w-8 h-8 text-green-600" />
+            <div className="w-14 h-14 bg-green-100 rounded-full mx-auto flex items-center justify-center mb-3">
+              <BarChart3 className="w-7 h-7 text-green-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Google Analytics 4</h3>
-            <p className="text-gray-600">Phân tích sâu về hành vi và journey của khách hàng</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Google Analytics 4</h3>
+            <p className="text-gray-600">Deep insights into customer behavior and journeys</p>
           </div>
           
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h4 className="font-semibold text-gray-900 mb-4">Tính năng GA4:</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Tracking sự kiện tùy chỉnh</span>
+          <div className="bg-gray-50 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-900 mb-3">GA4 Features:</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Custom event tracking</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Phân tích customer journey</span>
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Customer journey analysis</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Báo cáo conversion funnel</span>
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Conversion funnel reports</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>Tích hợp với Google Ads</span>
+              <li className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-sm">Google Ads integration</span>
               </li>
             </ul>
           </div>
@@ -150,36 +150,36 @@ const Onboarding = () => {
     },
     {
       icon: Settings,
-      title: "Hoàn tất cài đặt",
-      description: "Cấu hình cuối cùng và bắt đầu sử dụng TrackMaster để theo dõi hiệu quả marketing.",
+      title: "Complete Setup",
+      description: "Final configuration and start using TrackMaster to track your marketing performance.",
       content: (
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full mx-auto flex items-center justify-center mb-4">
-              <CheckCircle className="w-8 h-8 text-purple-600" />
+            <div className="w-14 h-14 bg-purple-100 rounded-full mx-auto flex items-center justify-center mb-3">
+              <CheckCircle className="w-7 h-7 text-purple-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Sẵn sàng sử dụng!</h3>
-            <p className="text-gray-600">Bạn đã hoàn tất việc cài đặt TrackMaster</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Ready to Go!</h3>
+            <p className="text-gray-600">You've successfully set up TrackMaster</p>
           </div>
           
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
-            <h4 className="font-semibold text-gray-900 mb-4">Bước tiếp theo:</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <ArrowRight className="w-5 h-5 text-blue-500" />
-                <span>Truy cập Dashboard để xem tổng quan</span>
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-900 mb-3">Next Steps:</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center space-x-2">
+                <ArrowRight className="w-4 h-4 text-blue-500" />
+                <span className="text-sm">Access Dashboard for overview</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <ArrowRight className="w-5 h-5 text-blue-500" />
-                <span>Cấu hình conversion actions</span>
+              <li className="flex items-center space-x-2">
+                <ArrowRight className="w-4 h-4 text-blue-500" />
+                <span className="text-sm">Configure conversion actions</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <ArrowRight className="w-5 h-5 text-blue-500" />
-                <span>Thiết lập custom events</span>
+              <li className="flex items-center space-x-2">
+                <ArrowRight className="w-4 h-4 text-blue-500" />
+                <span className="text-sm">Set up custom events</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <ArrowRight className="w-5 h-5 text-blue-500" />
-                <span>Xem báo cáo chi tiết</span>
+              <li className="flex items-center space-x-2">
+                <ArrowRight className="w-4 h-4 text-blue-500" />
+                <span className="text-sm">View detailed reports</span>
               </li>
             </ul>
           </div>
@@ -206,28 +206,28 @@ const Onboarding = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div className="max-w-6xl mx-auto p-6">
+      <div className="max-w-5xl mx-auto p-4">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Target className="w-5 h-5 text-white" />
+        <div className="text-center mb-6">
+          <div className="flex items-center justify-center space-x-2 mb-3">
+            <div className="w-7 h-7 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <Target className="w-4 h-4 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">TrackMaster</span>
+            <span className="text-lg font-bold text-gray-900">TrackMaster</span>
           </div>
-          <Progress value={progress} className="w-full max-w-md mx-auto mb-2" />
-          <p className="text-sm text-gray-600">Bước {currentStep + 1} / {steps.length}</p>
+          <Progress value={progress} className="w-full max-w-sm mx-auto mb-2" />
+          <p className="text-sm text-gray-600">Step {currentStep + 1} of {steps.length}</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Steps sidebar */}
           <div className="lg:col-span-1">
             <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Hướng dẫn cài đặt</CardTitle>
-                <CardDescription>Làm theo các bước để hoàn tất cài đặt</CardDescription>
+              <CardHeader className="pb-3">
+                <CardTitle className="text-base">Setup Guide</CardTitle>
+                <CardDescription className="text-sm">Follow these steps to complete setup</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-3">
                 {steps.map((step, index) => (
                   <OnboardingStep
                     key={index}
@@ -244,29 +244,31 @@ const Onboarding = () => {
 
           {/* Main content */}
           <div className="lg:col-span-2">
-            <Card className="min-h-[500px]">
-              <CardContent className="p-8">
+            <Card className="min-h-[450px]">
+              <CardContent className="p-6">
                 <div className="animate-fade-in">
                   {steps[currentStep].content}
                 </div>
 
                 {/* Navigation buttons */}
-                <div className="flex justify-between items-center mt-8 pt-6 border-t">
+                <div className="flex justify-between items-center mt-6 pt-4 border-t">
                   <Button
                     variant="outline"
                     onClick={prevStep}
                     disabled={currentStep === 0}
-                    className="flex items-center space-x-2"
+                    className="flex items-center space-x-1"
+                    size="sm"
                   >
-                    <span>Quay lại</span>
+                    <span>Back</span>
                   </Button>
 
                   <Button
                     onClick={nextStep}
-                    className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    className="flex items-center space-x-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                    size="sm"
                   >
-                    <span>{currentStep === steps.length - 1 ? 'Hoàn tất' : 'Tiếp tục'}</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <span>{currentStep === steps.length - 1 ? 'Complete' : 'Continue'}</span>
+                    <ArrowRight className="w-3 h-3" />
                   </Button>
                 </div>
               </CardContent>
