@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -45,28 +44,69 @@ const Onboarding = () => {
     {
       icon: Play,
       title: "Welcome to TrackMaster",
-      description: "Complete analytics solution for tracking Google Ads conversions and Google Analytics 4.",
+      description: "Your complete analytics solution for tracking Google Ads conversions and Google Analytics 4.",
       content: (
-        <div className="text-center space-y-4">
-          <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
-            <Target className="w-10 h-10 text-white" />
+        <div className="text-center space-y-6">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto flex items-center justify-center">
+            <Target className="w-8 h-8 text-white" />
           </div>
+          
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">
               TrackMaster Analytics
             </h2>
-            <p className="text-lg text-gray-600 mb-4">
+            <p className="text-gray-600 mb-6">
               Track ad performance and analyze customer behavior with precision
             </p>
-            <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <Target className="w-6 h-6 text-blue-600 mx-auto mb-1" />
-                <p className="text-xs font-medium text-blue-900">Google Ads Tracking</p>
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-5 text-left">
+            <h3 className="font-semibold text-gray-900 mb-4 text-center">How TrackMaster Works:</h3>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs font-bold text-blue-600">1</span>
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">Connect Google Ads</p>
+                  <p className="text-sm text-gray-600">Link your Google Ads account for automatic conversion tracking</p>
+                </div>
               </div>
-              <div className="bg-green-50 p-3 rounded-lg">
-                <BarChart3 className="w-6 h-6 text-green-600 mx-auto mb-1" />
-                <p className="text-xs font-medium text-green-900">GA4 Analytics</p>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs font-bold text-green-600">2</span>
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">Setup Google Analytics 4</p>
+                  <p className="text-sm text-gray-600">Configure GA4 to track user behavior and website events</p>
+                </div>
               </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-xs font-bold text-purple-600">3</span>
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">Monitor Performance</p>
+                  <p className="text-sm text-gray-600">Track traffic, performance metrics, and key data insights</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-3 max-w-xs mx-auto">
+            <div className="bg-blue-50 p-3 rounded-lg text-center">
+              <Target className="w-5 h-5 text-blue-600 mx-auto mb-1" />
+              <p className="text-xs font-medium text-blue-900">Ad Tracking</p>
+            </div>
+            <div className="bg-green-50 p-3 rounded-lg text-center">
+              <BarChart3 className="w-5 h-5 text-green-600 mx-auto mb-1" />
+              <p className="text-xs font-medium text-green-900">GA4 Analytics</p>
+            </div>
+            <div className="bg-purple-50 p-3 rounded-lg text-center">
+              <Settings className="w-5 h-5 text-purple-600 mx-auto mb-1" />
+              <p className="text-xs font-medium text-purple-900">Data Insights</p>
             </div>
           </div>
         </div>
