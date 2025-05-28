@@ -1,10 +1,9 @@
 
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, ArrowRight, Play, BarChart3, Target, Settings, ExternalLink, Eye, Activity } from 'lucide-react';
+import { CheckCircle, ArrowRight, Play, BarChart3, Target, Settings, ExternalLink, Eye, Activity, ArrowDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const OnboardingStep = ({ 
@@ -195,7 +194,7 @@ const Onboarding = () => {
       title: "Complete Setup",
       description: "Final configuration and start using TrackMaster to track your marketing performance.",
       content: (
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div className="text-center">
             <div className="w-14 h-14 bg-purple-100 rounded-full mx-auto flex items-center justify-center mb-3">
               <CheckCircle className="w-7 h-7 text-purple-600" />
@@ -204,97 +203,101 @@ const Onboarding = () => {
             <p className="text-gray-600">You've successfully set up TrackMaster</p>
           </div>
           
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
-            <h4 className="font-semibold text-gray-900 mb-3">Next Steps:</h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Target className="w-3 h-3 text-blue-600" />
+          <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl p-6 border border-slate-200">
+            <h4 className="font-semibold text-gray-900 mb-6 text-center text-lg">Next Steps:</h4>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                  <Target className="w-4 h-4 text-white" />
                 </div>
                 <div className="flex-1">
-                  <p className="font-medium text-gray-900 mb-1">Set Goals for Google Ads</p>
-                  <p className="text-sm text-gray-600 mb-3">Configure conversion goals using your newly created events</p>
-                  <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
-                    <div className="flex items-center justify-between mb-4">
-                      <p className="text-sm font-medium text-gray-800">Setup Instructions</p>
-                      <div className="flex items-center space-x-1 text-xs text-gray-500">
-                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <p className="font-semibold text-gray-900 mb-2 text-lg">Set Goals for Google Ads</p>
+                  <p className="text-sm text-gray-600 mb-4">Configure conversion goals using your newly created events</p>
+                  <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+                    <div className="flex items-center justify-between mb-5">
+                      <p className="text-sm font-semibold text-gray-800">Setup Instructions</p>
+                      <div className="flex items-center space-x-2 text-xs text-gray-500">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
                         <span>5 steps</span>
                       </div>
                     </div>
-                    <div className="space-y-3 mb-4">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                          <span className="text-sm font-bold text-white">1</span>
+                    <div className="space-y-4 mb-5">
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center space-x-4 w-full">
+                          <div className="w-10 h-10 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-300">
+                            <span className="text-sm font-bold text-slate-600">1</span>
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-medium text-gray-800">Visit Google Campaigns</p>
+                            <p className="text-xs text-gray-500 mt-1">Open your Google Ads campaign dashboard</p>
+                          </div>
                         </div>
-                        <div className="flex-1 pt-1">
-                          <p className="text-sm font-semibold text-gray-800">Visit Google Campaigns</p>
-                          <p className="text-xs text-gray-600 mt-1">Open your Google Ads campaign dashboard</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex justify-center">
-                        <div className="w-px h-4 bg-gradient-to-b from-blue-300 to-green-300"></div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                          <span className="text-sm font-bold text-white">2</span>
-                        </div>
-                        <div className="flex-1 pt-1">
-                          <p className="text-sm font-semibold text-gray-800">Select Campaign Settings</p>
-                          <p className="text-xs text-gray-600 mt-1">Navigate to your campaign configuration</p>
+                        <div className="flex justify-center w-full mt-3 mb-3">
+                          <ArrowDown className="w-4 h-4 text-slate-400" />
                         </div>
                       </div>
                       
-                      <div className="flex justify-center">
-                        <div className="w-px h-4 bg-gradient-to-b from-green-300 to-purple-300"></div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                          <span className="text-sm font-bold text-white">3</span>
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center space-x-4 w-full">
+                          <div className="w-10 h-10 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-emerald-300">
+                            <span className="text-sm font-bold text-emerald-600">2</span>
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-medium text-gray-800">Select Campaign Settings</p>
+                            <p className="text-xs text-gray-500 mt-1">Navigate to your campaign configuration</p>
+                          </div>
                         </div>
-                        <div className="flex-1 pt-1">
-                          <p className="text-sm font-semibold text-gray-800">Choose Conversion Goals</p>
-                          <p className="text-xs text-gray-600 mt-1">Access the conversion settings menu</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex justify-center">
-                        <div className="w-px h-4 bg-gradient-to-b from-purple-300 to-orange-300"></div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                          <span className="text-sm font-bold text-white">4</span>
-                        </div>
-                        <div className="flex-1 pt-1">
-                          <p className="text-sm font-semibold text-gray-800">Change Campaign Goals</p>
-                          <p className="text-xs text-gray-600 mt-1">Modify your current goal configuration</p>
+                        <div className="flex justify-center w-full mt-3 mb-3">
+                          <ArrowDown className="w-4 h-4 text-slate-400" />
                         </div>
                       </div>
                       
-                      <div className="flex justify-center">
-                        <div className="w-px h-4 bg-gradient-to-b from-orange-300 to-red-300"></div>
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center space-x-4 w-full">
+                          <div className="w-10 h-10 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-sky-300">
+                            <span className="text-sm font-bold text-sky-600">3</span>
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-medium text-gray-800">Choose Conversion Goals</p>
+                            <p className="text-xs text-gray-500 mt-1">Access the conversion settings menu</p>
+                          </div>
+                        </div>
+                        <div className="flex justify-center w-full mt-3 mb-3">
+                          <ArrowDown className="w-4 h-4 text-slate-400" />
+                        </div>
                       </div>
                       
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-                          <span className="text-sm font-bold text-white">5</span>
+                      <div className="flex flex-col items-center">
+                        <div className="flex items-center space-x-4 w-full">
+                          <div className="w-10 h-10 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-amber-300">
+                            <span className="text-sm font-bold text-amber-600">4</span>
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-sm font-medium text-gray-800">Change Campaign Goals</p>
+                            <p className="text-xs text-gray-500 mt-1">Modify your current goal configuration</p>
+                          </div>
                         </div>
-                        <div className="flex-1 pt-1">
-                          <p className="text-sm font-semibold text-gray-800">Select Your Newly Created Events</p>
-                          <p className="text-xs text-gray-600 mt-1">Choose the conversion events you just set up</p>
+                        <div className="flex justify-center w-full mt-3 mb-3">
+                          <ArrowDown className="w-4 h-4 text-slate-400" />
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center space-x-4 w-full">
+                        <div className="w-10 h-10 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-rose-300">
+                          <span className="text-sm font-bold text-rose-600">5</span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-800">Select Your Newly Created Events</p>
+                          <p className="text-xs text-gray-500 mt-1">Choose the conversion events you just set up</p>
                         </div>
                       </div>
                     </div>
-                    <div className="pt-3 border-t border-gray-100">
+                    <div className="pt-4 border-t border-slate-100">
                       <a 
                         href="https://ads.google.com/aw/adgroups" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md"
                       >
                         <span>Open Google Ads</span>
                         <ExternalLink className="w-4 h-4" />
@@ -304,22 +307,22 @@ const Onboarding = () => {
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <BarChart3 className="w-3 h-3 text-green-600" />
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                  <BarChart3 className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">Monitor Google Analytics 4</p>
+                  <p className="font-semibold text-gray-900 text-lg">Monitor Google Analytics 4</p>
                   <p className="text-sm text-gray-600">Track user behavior and conversion funnels in real-time</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Activity className="w-3 h-3 text-purple-600" />
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                  <Activity className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900">Track Events with Real-time Dashboard</p>
+                  <p className="font-semibold text-gray-900 text-lg">Track Events with Real-time Dashboard</p>
                   <p className="text-sm text-gray-600">Monitor live events and performance metrics within the app</p>
                 </div>
               </div>
