@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { CheckCircle, ArrowRight, Play, BarChart3, Target, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Play, BarChart3, Target, Settings, ExternalLink, Eye, Activity } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const OnboardingStep = ({ 
@@ -204,24 +205,56 @@ const Onboarding = () => {
           
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
             <h4 className="font-semibold text-gray-900 mb-3">Next Steps:</h4>
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <ArrowRight className="w-4 h-4 text-blue-500" />
-                <span className="text-sm">Access Dashboard for overview</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <ArrowRight className="w-4 h-4 text-blue-500" />
-                <span className="text-sm">Configure conversion actions</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <ArrowRight className="w-4 h-4 text-blue-500" />
-                <span className="text-sm">Set up custom events</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <ArrowRight className="w-4 h-4 text-blue-500" />
-                <span className="text-sm">View detailed reports</span>
-              </li>
-            </ul>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Target className="w-3 h-3 text-blue-600" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900 mb-1">Set Goals for Google Ads</p>
+                  <p className="text-sm text-gray-600 mb-2">Configure conversion goals using your newly created events</p>
+                  <div className="bg-white rounded p-3 border border-gray-200">
+                    <p className="text-xs text-gray-700 mb-2"><strong>How to do it:</strong></p>
+                    <ol className="text-xs text-gray-600 space-y-1">
+                      <li>1. Visit Google Campaigns</li>
+                      <li>2. Select Campaign Settings</li>
+                      <li>3. Choose Conversion Goals</li>
+                      <li>4. Change Campaign Goals</li>
+                      <li>5. Select your newly created events</li>
+                    </ol>
+                    <a 
+                      href="https://ads.google.com/aw/adgroups" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-1 text-blue-600 text-xs mt-2 hover:text-blue-700"
+                    >
+                      <span>Open Google Ads</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <BarChart3 className="w-3 h-3 text-green-600" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">Monitor Google Analytics 4</p>
+                  <p className="text-sm text-gray-600">Track user behavior and conversion funnels in real-time</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Activity className="w-3 h-3 text-purple-600" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">Track Events with Real-time Dashboard</p>
+                  <p className="text-sm text-gray-600">Monitor live events and performance metrics within the app</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )
