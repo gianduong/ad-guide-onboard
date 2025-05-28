@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -210,27 +211,60 @@ const Onboarding = () => {
                 <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Target className="w-3 h-3 text-blue-600" />
                 </div>
-                <div>
+                <div className="flex-1">
                   <p className="font-medium text-gray-900 mb-1">Set Goals for Google Ads</p>
-                  <p className="text-sm text-gray-600 mb-2">Configure conversion goals using your newly created events</p>
-                  <div className="bg-white rounded p-3 border border-gray-200">
-                    <p className="text-xs text-gray-700 mb-2"><strong>How to do it:</strong></p>
-                    <ol className="text-xs text-gray-600 space-y-1">
-                      <li>1. Visit Google Campaigns</li>
-                      <li>2. Select Campaign Settings</li>
-                      <li>3. Choose Conversion Goals</li>
-                      <li>4. Change Campaign Goals</li>
-                      <li>5. Select your newly created events</li>
-                    </ol>
-                    <a 
-                      href="https://ads.google.com/aw/adgroups" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-1 text-blue-600 text-xs mt-2 hover:text-blue-700"
-                    >
-                      <span>Open Google Ads</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
+                  <p className="text-sm text-gray-600 mb-3">Configure conversion goals using your newly created events</p>
+                  <div className="bg-white rounded-lg p-4 border border-gray-200 shadow-sm">
+                    <div className="flex items-center justify-between mb-3">
+                      <p className="text-sm font-medium text-gray-800">Setup Instructions</p>
+                      <div className="flex items-center space-x-1 text-xs text-gray-500">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <span>5 steps</span>
+                      </div>
+                    </div>
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center space-x-3 text-sm">
+                        <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-xs font-semibold text-blue-600">1</span>
+                        </div>
+                        <span className="text-gray-700">Visit Google Campaigns</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-sm">
+                        <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-xs font-semibold text-blue-600">2</span>
+                        </div>
+                        <span className="text-gray-700">Select Campaign Settings</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-sm">
+                        <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-xs font-semibold text-blue-600">3</span>
+                        </div>
+                        <span className="text-gray-700">Choose Conversion Goals</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-sm">
+                        <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-xs font-semibold text-blue-600">4</span>
+                        </div>
+                        <span className="text-gray-700">Change Campaign Goals</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-sm">
+                        <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-xs font-semibold text-blue-600">5</span>
+                        </div>
+                        <span className="text-gray-700">Select your newly created events</span>
+                      </div>
+                    </div>
+                    <div className="pt-3 border-t border-gray-100">
+                      <a 
+                        href="https://ads.google.com/aw/adgroups" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-200"
+                      >
+                        <span>Open Google Ads</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -354,3 +388,4 @@ const Onboarding = () => {
 };
 
 export default Onboarding;
+
