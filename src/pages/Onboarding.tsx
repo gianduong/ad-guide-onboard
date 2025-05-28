@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -224,8 +223,8 @@ const Onboarding = () => {
                     <div className="space-y-4 mb-5">
                       <div className="flex flex-col items-center">
                         <div className="flex items-center space-x-4 w-full">
-                          <div className="w-10 h-10 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-300">
-                            <span className="text-sm font-bold text-slate-600">1</span>
+                          <div className="w-7 h-7 bg-gradient-to-br from-slate-100 to-slate-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-slate-300">
+                            <span className="text-xs font-bold text-slate-600">1</span>
                           </div>
                           <div className="flex-1">
                             <p className="text-sm font-medium text-gray-800">Visit Google Campaigns</p>
@@ -239,8 +238,8 @@ const Onboarding = () => {
                       
                       <div className="flex flex-col items-center">
                         <div className="flex items-center space-x-4 w-full">
-                          <div className="w-10 h-10 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-emerald-300">
-                            <span className="text-sm font-bold text-emerald-600">2</span>
+                          <div className="w-7 h-7 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-emerald-300">
+                            <span className="text-xs font-bold text-emerald-600">2</span>
                           </div>
                           <div className="flex-1">
                             <p className="text-sm font-medium text-gray-800">Select Campaign Settings</p>
@@ -254,8 +253,8 @@ const Onboarding = () => {
                       
                       <div className="flex flex-col items-center">
                         <div className="flex items-center space-x-4 w-full">
-                          <div className="w-10 h-10 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-sky-300">
-                            <span className="text-sm font-bold text-sky-600">3</span>
+                          <div className="w-7 h-7 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-sky-300">
+                            <span className="text-xs font-bold text-sky-600">3</span>
                           </div>
                           <div className="flex-1">
                             <p className="text-sm font-medium text-gray-800">Choose Conversion Goals</p>
@@ -269,8 +268,8 @@ const Onboarding = () => {
                       
                       <div className="flex flex-col items-center">
                         <div className="flex items-center space-x-4 w-full">
-                          <div className="w-10 h-10 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-amber-300">
-                            <span className="text-sm font-bold text-amber-600">4</span>
+                          <div className="w-7 h-7 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-amber-300">
+                            <span className="text-xs font-bold text-amber-600">4</span>
                           </div>
                           <div className="flex-1">
                             <p className="text-sm font-medium text-gray-800">Change Campaign Goals</p>
@@ -283,8 +282,8 @@ const Onboarding = () => {
                       </div>
                       
                       <div className="flex items-center space-x-4 w-full">
-                        <div className="w-10 h-10 bg-gradient-to-br from-rose-100 to-rose-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-rose-300">
-                          <span className="text-sm font-bold text-rose-600">5</span>
+                        <div className="w-7 h-7 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-purple-300">
+                          <span className="text-xs font-bold text-purple-600">5</span>
                         </div>
                         <div className="flex-1">
                           <p className="text-sm font-medium text-gray-800">Select Your Newly Created Events</p>
